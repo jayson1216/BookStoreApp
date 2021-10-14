@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./public.component.scss']
 })
 export class PublicComponent implements OnInit {
-
+  bookIdz: number = 1;
+  authorId: number = 8;
   constructor() { }
 
   ngOnInit(): void {

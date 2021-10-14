@@ -8,7 +8,7 @@ import { AllBooksComponent } from './components/all-books/all-books.component';
 const routes: Routes = [
   {
     path: 'public', component: PublicComponent, children: [
-      { path: 'book-details/:id', component: BookDetailsComponent },
+      { path: 'book-details/:id/author/:authorId', component: BookDetailsComponent },
       { path: 'all-books', component: AllBooksComponent }
     ]
   }
