@@ -3,24 +3,19 @@ import { CommonModule } from '@angular/common';
 import { Router, RouterModule, Routes } from '@angular/router';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { HowItWorksComponent } from './how-it-works/how-it-works.component';
-import { AuthComponent } from './auth/auth.component';
-import { SignupComponent } from './auth/components/signup/signup.component';
-import { ChangePasswordComponent } from './auth/components/change-password/change-password.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'about-us', pathMatch: 'full' },
   { path: 'about-us', component: AboutUsComponent },
   { path: 'how-it-works', component: HowItWorksComponent },
-  {
-    path: 'auth', component: AuthComponent, children: [
-      { path: 'sign-up', component: SignupComponent },
-      { path: 'change-password', component: ChangePasswordComponent }
-    ]
-  }];
+  { path: '**', component: PageNotFoundComponent }
+];
 
 @NgModule({
   imports: [
     RouterModule.forRoot(routes)
   ],
-  exports:[RouterModule]
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }

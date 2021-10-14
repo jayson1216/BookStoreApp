@@ -6,6 +6,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { HowItWorksComponent } from './how-it-works/how-it-works.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthModule } from './auth/auth.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PublicModule } from './public/public.module';
 
 
 
@@ -13,12 +15,14 @@ import { AuthModule } from './auth/auth.module';
   declarations: [
     AppComponent,
     AboutUsComponent,
-    HowItWorksComponent
+    HowItWorksComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    AuthModule
+    AuthModule,
+    PublicModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
