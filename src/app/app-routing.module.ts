@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'about-us', pathMatch: 'full' },
   { path: 'about-us', component: AboutUsComponent },
   { path: 'how-it-works', component: HowItWorksComponent },
+  { path: 'auth', loadChildren:() => import('./auth/auth.module').then(x => x.AuthModule) },
   { path: '**', component: PageNotFoundComponent }
 ];
 

@@ -5,11 +5,10 @@ import { AuthComponent } from './auth.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ChangePasswordComponent } from './components/change-password/change-password.component';
 
-const routes: Routes = [{
-  path: 'auth', component: AuthComponent, children: [
-    { path: 'sign-up', component: SignupComponent },
-    { path: 'change-password', component: ChangePasswordComponent }]
-}];
+const routes: Routes = [
+  { path: 'sign-up', component: SignupComponent },
+  { path: 'change-password', component: ChangePasswordComponent }
+];
 
 
 @NgModule({
